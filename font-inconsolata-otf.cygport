@@ -1,0 +1,20 @@
+inherit font
+
+NAME="font-inconsolata-otf"
+VERSION=1.010
+RELEASE=1
+CATEGORY="X11"
+SUMMARY="Inconsolata monospace font"
+DESCRIPTION="Inconsolata is a monospace font, designed for code listings and
+the like, in print."
+HOMEPAGE="http://www.levien.com/type/myfonts/inconsolata.html"
+SRC_URI="http://www.levien.com/type/myfonts/Inconsolata.otf"
+SRC_DIR=.
+
+src_compile() { :; }
+
+src_install() {
+	cd ${S}
+	fontinto OTF
+	dofont *.otf
+}
